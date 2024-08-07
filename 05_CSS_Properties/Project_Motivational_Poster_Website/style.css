@@ -4,21 +4,21 @@ body {
 }
 
 div {
-    width: 50%;
-    margin-left: 25%;
+    width: 70%;
+    margin-left: 15%;
     margin-top: 5%;
 }
 
 h1 {
     font-family: "Libre Baskerville", serif;
     text-align: center;
-    font-size: 150%;
+    font-size: 170%;
     text-transform: uppercase;
 }
 
 p {
     text-align: center;
-    font-size: 100%;
+    font-size: 120%;
 }
 
 img {
