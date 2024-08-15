@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BMI Calculator</title>
+    </head>
+    <body>
+        <script>
+            //BMI Calculation Function
+            function bmiCalculator(weight, height) {
+                var bmi = weight / (height * height);
+                return Math.round(bmi);
+            }
+
+            //Prompt the Users Weight and Height
+            var weight = prompt("What is your weight in Kg?");
+            var height = prompt("What is your height in meters to the nearest tenth decimal?");
+
+            //Calculate their BMI
+            var bmiResult = bmiCalculator(weight, height);
+            console.log("Your BMI Result is : " + bmiResult);
+            alert("Your BMI Result is : " + bmiResult);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>String Casing</title>
+    </head>
+    <body>
+        <script>
+            var name = "Matthew"
+            alert(name.toUpperCase());
+            alert(name.toLowerCase());
+
+            //Exercise - Prompt a Users name and capitalize only the first letter of the name
+            var userName = prompt("What is your name?");
+            var firstLetter = userName.slice(0, 1).toUpperCase();
+            var nameEnding = userName.slice(1).toLowerCase();
+            var userName = firstLetter + nameEnding
+            alert("Hello " + userName)
+        </script>
+    </body>
+</html>
