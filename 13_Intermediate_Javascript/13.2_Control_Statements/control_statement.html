@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Control Statements</title>
+    </head>
+    <body>
+        <script>
+            //Generate random number with crypto.getRandomValues()
+
+            //Log some starting message
+            console.log("----------------------------------------------------------------------");
+            console.log("Using the Crypto API:");
+
+            //Create an array for storing a single value
+            const cryptoArray = new Uint32Array(1);
+
+            //Randomize array with crypto.getRandomValues()
+            crypto.getRandomValues(cryptoArray);
+
+            //To get a random number in a specific range, first determine the range
+            var numberRange = 100;
+            var roundedNumber = Math.floor((cryptoArray[0] / (4294967295 / numberRange))) + 1;
+            console.log("Generating Random Number in Range 1 to " + numberRange + "...");
+            console.log("Number : " + roundedNumber);
+
+            //----------------------------------------------------------------------------------------------------
+            //Control Statements
+
+            if (roundedNumber >= 66) {
+                console.log("That's a high number!");
+            }
+
+            if (roundedNumber < 66 && roundedNumber > 33) {
+                console.log("That's an average number");
+            }
+
+            if (roundedNumber <= 33) {
+                console.log("That's a low number!");
+            }
+        </script>
+    </body>
+</html>
