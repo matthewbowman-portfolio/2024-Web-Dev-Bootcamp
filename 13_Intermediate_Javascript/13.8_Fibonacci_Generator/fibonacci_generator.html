@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fibonacci Generator</title>
+    </head>
+    <body>
+        <script>
+            //create function
+            function fibonacciGenerator(n) {
+                //create an empty array
+                var output = [];
+
+                if (n === 1) {
+                    output = [0];
+                }
+                else if (n === 2) {
+                    output = [0, 1];
+                }
+                else {
+                    output = [0, 1];
+                    
+                    for (let i = 2; i < n; i++) {
+                        output.push(output[output.length - 2] + output[output.length - 1]);
+                    }
+                }
+
+                //return fibonacci array
+                return output
+            }
+
+            //console log the sequence
+            console.log(fibonacciGenerator(27))
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>For Loops</title>
+    </head>
+    <body>
+        <script>
+            //create an empty array
+            var fizzBuzzArray = [];
+            var count = 1;
+
+            //for loop
+            for (let i = 0; i < 100; i++) {
+                if (count % 3 === 0 && count % 5 === 0) {
+                    fizzBuzzArray.push("FizzBuzz");
+                }
+                else if (count % 3 === 0) {
+                    fizzBuzzArray.push("Fizz");
+                }
+                else if (count % 5 === 0) {
+                    fizzBuzzArray.push("Buzz");
+                }
+                else {
+                    fizzBuzzArray.push(count);
+                }
+
+                //increment count
+                count++;
+            }
+
+            //console log the array
+            console.log(fizzBuzzArray);
+
+        </script>
+    </body>
+</html>

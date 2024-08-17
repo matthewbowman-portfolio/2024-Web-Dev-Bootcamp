@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adding and Removing Array Values</title>
+    </head>
+    <body>
+        <script>
+            //create an empty array
+            var fizzBuzzArray = [];
+            var count = 1;
+
+            //adding values to the array by index
+            for (let i = 0; i < 100; i++) {
+                if (count % 3 === 0 && count % 5 === 0) {
+                    fizzBuzzArray[i] = "FizzBuzz";
+                }
+                else if (count % 3 === 0) {
+                    fizzBuzzArray[i] = "Fizz";
+                }
+                else if (count % 5 === 0) {
+                    fizzBuzzArray[i] = "Buzz";
+                }
+                else {
+                    fizzBuzzArray[i] = count;
+                }
+
+                //increment count
+                count++;
+            }
+
+            //console log the array for proof
+            console.log(fizzBuzzArray);
+
+            //----------------------------------------------------------------------
+
+            ////create an empty array
+            var fizzBuzzArray = [];
+            var count = 1;
+
+            //adding values to the array by pushing
+            for (let i = 0; i < 100; i++) {
+                if (count % 3 === 0 && count % 5 === 0) {
+                    fizzBuzzArray.push("FizzBuzz");
+                }
+                else if (count % 3 === 0) {
+                    fizzBuzzArray.push("Fizz");
+                }
+                else if (count % 5 === 0) {
+                    fizzBuzzArray.push("Buzz");
+                }
+                else {
+                    fizzBuzzArray.push(count);
+                }
+
+                //increment count
+                count++;
+            }
+
+            //console log the array for proof
+            console.log(fizzBuzzArray);
+            
+            //----------------------------------------------------------------------
+            
+            //popping values off of an array (removes the last value of the array)
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            console.log(fizzBuzzArray);
+
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            fizzBuzzArray.pop();
+            console.log(fizzBuzzArray);
+
+        </script>
+    </body>
+</html>
