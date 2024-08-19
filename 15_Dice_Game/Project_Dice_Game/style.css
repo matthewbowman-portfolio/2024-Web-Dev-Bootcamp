@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(81, 81, 81);
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    margin: 32px;
+    font-size: 64px;
+}
+
+p {
+    margin: 16px;
+    font-size: 32px;
+}
+
+.dice {
+    display: inline-block;
+}
+
+img {
+    width: 81%;
+}
+
+button {
+    display: inline-block;
+    margin: 32px;
+    padding: 8px;
+    width: 16%;
+    font-size: 16px;
+}
+
+h2 {
+    margin: 16px;
+    font-size: 24px;
+}
