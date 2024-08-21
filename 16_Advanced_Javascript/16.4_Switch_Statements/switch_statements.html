@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Playing Sounds</title>
+        <style>
+            button {
+                display: inline-block;
+                padding: 3px;
+                margin: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Playing Sounds</h1>
+        <button id="button-1">Button 1</button>
+        <button id="button-2">Button 2</button>
+        <button id="button-3">Button 3</button>
+        <button id="button-4">Button 4</button>
+        <button id="button-5">Button 5</button>
+        <button id="button-6">Button 6</button>
+        <button id="button-7">Button 7</button>
+
+        <!--script-->
+        <script>
+            //assign variables for button objects and sound objects
+            var button_1 = document.querySelector("#button-1");
+            var button_2 = document.querySelector("#button-2");
+            var button_3 = document.querySelector("#button-3");
+            var button_4 = document.querySelector("#button-4");
+            var button_5 = document.querySelector("#button-5");
+            var button_6 = document.querySelector("#button-6");
+            var button_7 = document.querySelector("#button-7");
+
+            var sound_1 = new Audio("sounds/kick-bass.mp3");
+            var sound_2 = new Audio("sounds/crash.mp3");
+            var sound_3 = new Audio("sounds/snare.mp3");
+            var sound_4 = new Audio("sounds/tom-1.mp3");
+            var sound_5 = new Audio("sounds/tom-2.mp3");
+            var sound_6 = new Audio("sounds/tom-3.mp3");
+            var sound_7 = new Audio("sounds/tom-4.mp3");
+
+            //create variable for tracking button clicked
+            var btnClicked = null;
+
+            //create function with switch statement for playing sounds
+            function playSound() {
+
+                switch (btnClicked) {
+                    case button_1:
+                        sound_1.play();
+                        console.log("Sound-1 Playing");
+                        break;
+                    case button_2:
+                        sound_2.play();
+                        console.log("Sound-2 Playing");
+                        break;
+                    case button_3:
+                        sound_3.play();
+                        console.log("Sound-3 Playing");
+                        break;
+                    case button_4:
+                        sound_4.play();
+                        console.log("Sound-4 Playing");
+                        break;
+                    case button_5:
+                        sound_5.play();
+                        console.log("Sound-5 Playing");
+                        break;
+                    case button_6:
+                        sound_6.play();
+                        console.log("Sound-6 Playing");
+                        break;
+                    case button_7:
+                        sound_7.play();
+                        console.log("Sound-7 Playing");
+                        break;
+                    default:
+                        console.log("Try Again");
+                        break;
+                }
+            }
+
+            //add event listeners for changing btnclicked value and then playing the sound
+            button_1.addEventListener("click", function(){btnClicked=button_1; playSound();});
+            button_2.addEventListener("click", function(){btnClicked=button_2; playSound();});
+            button_3.addEventListener("click", function(){btnClicked=button_3; playSound();});
+            button_4.addEventListener("click", function(){btnClicked=button_4; playSound();});
+            button_5.addEventListener("click", function(){btnClicked=button_5; playSound();});
+            button_6.addEventListener("click", function(){btnClicked=button_6; playSound();});
+            button_7.addEventListener("click", function(){btnClicked=button_7; playSound();});
+
+        </script>
+    </body>
+</html>

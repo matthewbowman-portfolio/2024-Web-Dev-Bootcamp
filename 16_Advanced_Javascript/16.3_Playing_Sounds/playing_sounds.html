@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Playing Sounds</title>
+    </head>
+    <body>
+        <h1>Playing Sounds</h1>
+        <button>Click Me!</button>
+
+        <!--script-->
+        <script>
+            //assign variables for button object and sound object
+            var buttonObject = document.querySelector("button");
+            var soundObject = new Audio("sounds/sound_1.mp3");
+
+            //create some function
+            function playSound() {
+                soundObject.play();
+                console.log("Playing Sound");
+            }
+
+            //add event listener
+            //first argument specifies action to listen for, second argument takes the function to be performed
+            buttonObject.addEventListener("click", playSound);
+
+        </script>
+    </body>
+</html>

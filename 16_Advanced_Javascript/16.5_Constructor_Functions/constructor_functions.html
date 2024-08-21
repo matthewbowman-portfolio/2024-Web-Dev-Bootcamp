@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Constructor Functions</title>
+    </head>
+    <body>
+        <h1>Constructor Functions</h1>
+
+        <!--script-->
+        <script>
+            //create some arrays to hold programmer attributes
+            names = ["Bob", "Joe", "Jack", "Matthew", "Richard", "Emma", "Chloe", "Kat"];
+            programmingLanguages = ["HTML", "CSS", "Javascript", "Python", "C", "C++", "Java"];
+
+            //create a constructor function
+            function Programmer() {
+                this.name = names[Math.floor(Math.random() * names.length)];
+                this.age = Math.floor(Math.random() * 54) + 18;
+                this.programmingLanguage = programmingLanguages[Math.floor(Math.random() * programmingLanguages.length)];
+
+                //constructing a function of the constructed object
+                this.program = function () {
+                    console.log(this.name + " is programming...")
+                }
+            }
+
+            //construct some new programmers and log their objects and functions
+            programmer_1 = new Programmer();
+            console.log(programmer_1);
+            programmer_1.program()
+
+            programmer_2 = new Programmer();
+            console.log(programmer_2);
+            programmer_2.program()
+
+            programmer_3 = new Programmer();
+            console.log(programmer_3);
+            programmer_3.program()
+
+        </script>
+    </body>
+</html>

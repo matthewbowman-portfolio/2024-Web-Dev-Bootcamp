@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Keyboard Event Listeners</title>
+    </head>
+    <body>
+        <h1>Keyboard Event Listeners</h1>
+
+        <!--buttons-->
+        <button id="button-1">button-1</button>
+        <button id="button-2">button-2</button>
+        <button id="button-3">button-3</button>
+        <button id="button-4">button-4</button>
+        <button id="button-5">button-5</button>
+        <button id="button-6">button-6</button>
+        <button id="button-7">button-7</button>
+
+        <!--script-->
+        <script>
+            //sounds
+            var sound_1 = new Audio("sounds/kick-bass.mp3");
+            var sound_2 = new Audio("sounds/crash.mp3");
+            var sound_3 = new Audio("sounds/snare.mp3");
+            var sound_4 = new Audio("sounds/tom-1.mp3");
+            var sound_5 = new Audio("sounds/tom-2.mp3");
+            var sound_6 = new Audio("sounds/tom-3.mp3");
+            var sound_7 = new Audio("sounds/tom-4.mp3");
+
+            //----------------------------------------------------------------------------------------------------
+
+            //to check if a button is clicked, iterate through all document buttons
+            for (let i = 0; i < document.querySelectorAll("button").length; i++) {
+                
+                //add event listener
+                document.querySelectorAll("button")[i].addEventListener("click", function() {
+                    var buttonID = this.id;
+                    console.log(buttonID + " : clicked");
+
+                    //switch to corresponding button
+                    switch (buttonID) {
+                        case "button-1" :
+                            sound_1.play();
+                            console.log("sound-1 : playing");
+                            break;
+                        case "button-2" :
+                            sound_2.play();
+                            console.log("sound-2 : playing");
+                            break;
+                        case "button-3" :
+                            sound_3.play();
+                            console.log("sound-3 : playing");
+                            break;
+                        case "button-4" :
+                            sound_4.play();
+                            console.log("sound-4 : playing");
+                            break;
+                        case "button-5" :
+                            sound_5.play();
+                            console.log("sound-5 : playing");
+                            break;
+                        case "button-6" :
+                            sound_6.play();
+                            console.log("sound-6 : playing");
+                            break;
+                        case "button-7" :
+                            sound_7.play();
+                            console.log("sound-7 : playing");
+                            break;
+                        default:
+                            console.log("error : no button detected");
+                            break;
+                    }
+                });
+            }
+
+            //----------------------------------------------------------------------------------------------------
+
+            //to check if a specific key is pressed down, create an event listener of type "keydown"
+            document.addEventListener("keydown", function(event) {
+                var key = event.key;
+                console.log(key + " : key pressed");
+
+                //switch to corresponding key
+                switch (key) {
+                    case "w" :
+                        sound_1.play();
+                        console.log("sound-1 : playing");
+                        break;
+                    case "a" :
+                        sound_2.play();
+                        console.log("sound-2 : playing");
+                        break;
+                    case "s" :
+                        sound_3.play();
+                        console.log("sound-3 : playing");
+                        break;
+                    case "d" :
+                        sound_4.play();
+                        console.log("sound-4 : playing");
+                        break;
+                    case "f" :
+                        sound_5.play();
+                        console.log("sound-5 : playing");
+                        break;
+                    case "g" :
+                        sound_6.play();
+                        console.log("sound-6 : playing");
+                        break;
+                    case "h" :
+                        sound_7.play();
+                        console.log("sound-7 : playing");
+                        break;
+                    default:
+                        console.log("error : no key detected");
+                        break;
+                }
+            });
+
+        </script>
+    </body>
+</html>
